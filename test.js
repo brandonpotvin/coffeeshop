@@ -1,4 +1,4 @@
-//send user email to clipboard
+//send user email to clipboard work with redcap user management
 
 function copyToClipboard(clip) {
     var copyText = clip;
