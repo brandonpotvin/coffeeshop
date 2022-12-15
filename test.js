@@ -1,5 +1,7 @@
 //send user email to clipboard
 
+alert('Hello World')
+
 function copyToClipboard(clip) {
     var copyText = clip;
     navigator.clipboard.writeText(copyText).then(() => {
