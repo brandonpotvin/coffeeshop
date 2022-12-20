@@ -24,6 +24,8 @@ console.log("Record ID: ", recordId)
 
 if(formStatus == 2){
   copyToClipboard(recordId)
+  //Click Save and Exit
+  document.querySelector("#submit-btn-saverecord > span").click()
   } else {
     copyToClipboard(email_address)
   }
