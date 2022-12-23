@@ -20,15 +20,11 @@ console.log(currentUrlSearch)
 
 if(currentUrlSearch.includes("sams_aa")){
   var page = "sams_aa"
-} else if 
-  (currentUrlSearch == "?pid=1500&id=1&arm=1"){                     
+} 
+
+if(window.location.pathname == "/redcap_v12.0.8/DataEntry/record_home.php"){
   var page = "record_home_page" 
-} else if 
-  (currentUrlSearch == "?pid=1500&id=1&msg=edit"){
-  var page = "record_home_page" 
-} else {
-  var page = "Other"
-}
+} 
 
 console.log(page)
 
