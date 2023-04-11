@@ -22,10 +22,9 @@ if(currentUrlSearch.includes("sams_aa")){
   var page = "sams_aa"
 } 
 
-if(window.location.pathname == "/redcap_v12.0.8/DataEntry/record_home.php"){
+if(window.location.pathname.substring(window.location.pathname.lastIndexOf('/') + 1) == "record_home.php"){
   var page = "record_home_page" 
 } 
-
 console.log(page)
 
 if(page == "sams_aa"){
