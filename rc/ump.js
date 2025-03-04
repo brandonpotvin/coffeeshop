@@ -73,6 +73,6 @@ if(page == "sams_aa"){
   // Change record id (does not do final click)
   if(page == "record_home_page"){
     document.querySelector("#recordActionDropdownTrigger > span:nth-child(2) > span").click()
-    document.querySelector("#ui-id-6").click()
+    document.querySelector("#ui-id-7").click()
     document.querySelector("#new-record-name").value = sessionStorage.getItem("record_id")
    }
