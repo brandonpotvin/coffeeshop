@@ -18,12 +18,26 @@ jsdelivr_path = document.querySelector("#page > div > div.content > div.containe
 console.log(jsdelivr_path)
 
 //Create Bookmarklet
-if (typeof bookmarklet !== "undefined") {
+
+javascript:(function () {
+  if (typeof bookmarklet !== 'undefined') {
+    // Undefine the existing bookmarklet variable
     bookmarklet = undefined;
-}
-if (bookmarklet === "undefined"){
-  let bookmarklet = "javascript:(function () {  var script = document.createElement('script');  script.src = '" + jsdelivr_path + "';  document.body.appendChild(script);}());";
-}
-console.log(bookmarklet);
+  }
+  // Now define it
+  var bookmarklet = "javascript:(function () { var script = document.createElement('script'); script.src = '" + jsdelivr_path + "'; document.body.appendChild(script);}());";
+  console.log("Bookmarklet is redefined.");
+})();
+
+
+
+
+// if (typeof bookmarklet !== "undefined") {
+//     bookmarklet = undefined;
+// }
+// if (bookmarklet === "undefined"){
+//   let bookmarklet = "javascript:(function () {  var script = document.createElement('script');  script.src = '" + jsdelivr_path + "';  document.body.appendChild(script);}());";
+// }
+// console.log(bookmarklet);
 
 copyToClipboard(bookmarklet)
