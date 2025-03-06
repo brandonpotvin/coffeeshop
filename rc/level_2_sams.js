@@ -4,7 +4,7 @@
   document.querySelector("#opt-sams_1").click()
 
   // Have you initiated a SAMS invitation for Level II
-  document.querySelector("#opt-sams_level_ii_1")
+  document.querySelector("#opt-sams_level_ii_1").click()
 
   //Select Complete
   let selectElement = document.querySelector("#sams_aa_complete-tr > td.data.col-5 > span > span > select");
