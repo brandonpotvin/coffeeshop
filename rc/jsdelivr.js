@@ -18,6 +18,9 @@ jsdelivr_path = document.querySelector("#page > div > div.content > div.containe
 console.log(jsdelivr_path)
 
 //Create Bookmarklet
+if (typeof bookmarklet !== "undefined") {
+    bookmarklet = undefined;
+}
 let bookmarklet = "javascript:(function () {  var script = document.createElement('script');  script.src = '" + jsdelivr_path + "';  document.body.appendChild(script);}());";
 console.log(bookmarklet);
 
