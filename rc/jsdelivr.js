@@ -1,5 +1,7 @@
 //Convert JSDELIVR Link to Bookmarklet
 
+console.write("Hello")
+
 function readFromClipboard(){
   navigator.clipboard
   .readText()
