@@ -21,7 +21,7 @@ console.log(jsdelivr_path)
 if (typeof bookmarklet !== "undefined") {
     bookmarklet = undefined;
 }
-let bookmarklet = "javascript:(function () {  var script = document.createElement('script');  script.src = '" + jsdelivr_path + "';  document.body.appendChild(script);}());";
+bookmarklet = "javascript:(function () {  var script = document.createElement('script');  script.src = '" + jsdelivr_path + "';  document.body.appendChild(script);}());";
 console.log(bookmarklet);
 
 copyToClipboard(bookmarklet)
