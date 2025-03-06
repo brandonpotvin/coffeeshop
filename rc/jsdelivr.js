@@ -24,10 +24,13 @@ function readFromClipboard(){
 //Get GitHub Path
 git_path = readFromClipboard()
 
-let inputBox = document.querySelector("#page > div > div.content > div.container > div.box > div.input-wrapper.mb-48 > input");
+// Select the input field
+var inputBox = document.querySelector("#page > div > div.content > div.container > div.box > div.input-wrapper.mb-48 > input");
+
+// Check if the input field exists before modifying it
 if (inputBox) {
-    inputBox.value = git_path;
-    inputBox.dispatchEvent(new Event("input", { bubbles: true })); // Ensure any event listeners detect the change
+    inputBox.value = git_path;  // Assign the git_path value
+    inputBox.dispatchEvent(new Event("input", { bubbles: true }));  // Trigger input event
 }
 
 //Get JSDELIVR path
