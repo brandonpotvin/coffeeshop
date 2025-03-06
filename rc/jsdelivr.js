@@ -34,8 +34,12 @@ if (inputBox) {
 }
 
 //Get JSDELIVR path
-let jsdelivr_path = document.querySelector("#page > div > div.content > div.container > div.box > div:nth-child(5) > input")?.value;
-console.log(js_path); // Check the value in the console
+if (typeof jsdelivr_path !== "undefined") {
+    jsdelivr_path = undefined;
+}
+
+jsdelivr_path = document.querySelector("#page > div > div.content > div.container > div.box > div:nth-child(5) > input")?.value;
+console.log(jsdelivr_path); // Check the value in the console
 
 //Create Bookmarklet
 let bookmarklet = "javascript:(function () {  var script = document.createElement('script');  script.src = '" + jsdelivr_path + "';  document.body.appendChild(script);}());";
