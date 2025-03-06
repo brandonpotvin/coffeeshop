@@ -29,7 +29,9 @@ javascript:(function () {
   console.log("Bookmarklet is redefined.");
 })();
 
+console.log(bookmarklet)
 
+copyToClipboard(bookmarklet)
 
 
 // if (typeof bookmarklet !== "undefined") {
@@ -40,4 +42,4 @@ javascript:(function () {
 // }
 // console.log(bookmarklet);
 
-copyToClipboard(bookmarklet)
+// copyToClipboard(bookmarklet)
