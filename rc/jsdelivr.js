@@ -18,19 +18,8 @@ jsdelivr_path = document.querySelector("#page > div > div.content > div.containe
 console.log(jsdelivr_path)
 
 //Create Bookmarklet
-
-javascript:(function () {
-  if (typeof bookmarklet !== 'undefined') {
-    // Undefine the existing bookmarklet variable
-    bookmarklet = undefined;
-  }
-  // Now define it
-  var bookmarklet = "javascript:(function () { var script = document.createElement('script'); script.src = '" + jsdelivr_path + "'; document.body.appendChild(script);}());";
-  console.log("Bookmarklet is redefined.");
-})();
-
+bookmarklet = "javascript:(function () { var script = document.createElement('script'); script.src = '" + jsdelivr_path + "'; document.body.appendChild(script);}());";
 console.log(bookmarklet)
-
 copyToClipboard(bookmarklet)
 
 
