@@ -24,12 +24,14 @@ console.log(page)
 if(page == "pd_admin"){
   // Get Project Name
   var project_name = document.querySelector("#summary_request-tr > td > div > div > center > table > tbody > tr:nth-child(6) > td:nth-child(2) > p > b > span").textContent
+  project_name = project_name.trim(); 
   console.log("Project Name: ", project_name)
  // Store in localStorage
  localStorage.setItem("project_name", project_name);
 
  var project_type = document.querySelector("#summary_request-tr > td > div > div > center > table > tbody > tr:nth-child(5) > td:nth-child(2) > p > b > span").textContent;
- // Store in localStorage
+ project_type = project_type.trim(); 
+  // Store in localStorage
  localStorage.setItem("project_type", project_type);
 
   var project_type = document.querySelector("#summary_request-tr > td > div > div > center > table > tbody > tr:nth-child(5) > td:nth-child(2) > p > b > span").textContent
