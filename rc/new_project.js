@@ -68,9 +68,13 @@ if(page == "new_proj"){
         document.querySelector("#purpose").value = 0;
     } else if (project_type === "Research/Special Study") {
         document.querySelector("#purpose").value = 2;
+        document.querySelector("#purpose_other\\[5\\]").click()
     } else if (project_type === "Surveillance") {
         document.querySelector("#purpose").value = 2;
+        document.querySelector("#purpose_other\\[5\\]").click()
     }
+
+    //Select Research Type Conditionall
 
     //Set Project Creation Option to Use a Template
     document.querySelector("#pagecontent > div > form > table > tbody > tr:nth-child(9) > td:nth-child(2) > div:nth-child(3) > label").click()
