@@ -39,12 +39,13 @@ if(page == "pd_admin"){
 if(page == "new_proj"){
     if (project_type === "Administrative") {
       document.querySelector("#purpose").value = 4;
-  } else if (project_type === "Monitoring and Evaluation") {
-      document.querySelector("#purpose").value = 3;
-  } else if (project_type === "Practice/Training/Test") {
-      document.querySelector("#purpose").value = 0;
-  } else if (project_type === "Research/Special Study") {
-      document.querySelector("#purpose").value = 2;
-  } else if (project_type === "Surveillance") {
-      document.querySelector("#purpose").value = 2;
-  }
+    } else if (project_type === "Monitoring and Evaluation") {
+        document.querySelector("#purpose").value = 3;
+    } else if (project_type === "Practice/Training/Test") {
+        document.querySelector("#purpose").value = 0;
+    } else if (project_type === "Research/Special Study") {
+        document.querySelector("#purpose").value = 2;
+    } else if (project_type === "Surveillance") {
+        document.querySelector("#purpose").value = 2;
+    }
+}
