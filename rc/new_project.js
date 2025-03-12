@@ -25,7 +25,13 @@ if(page == "pd_admin"){
   // Get Project Name
   var project_name = document.querySelector("#summary_request-tr > td > div > div > center > table > tbody > tr:nth-child(6) > td:nth-child(2) > p > b > span").textContent
   console.log("Project Name: ", project_name)
-  
+ // Store in localStorage
+ localStorage.setItem("project_name", project_name);
+
+ var project_type = document.querySelector("#summary_request-tr > td > div > div > center > table > tbody > tr:nth-child(5) > td:nth-child(2) > p > b > span").textContent;
+ // Store in localStorage
+ localStorage.setItem("project_type", project_type);
+
   var project_type = document.querySelector("#summary_request-tr > td > div > div > center > table > tbody > tr:nth-child(5) > td:nth-child(2) > p > b > span").textContent
   console.log("Project Type: ", project_type)
   
@@ -36,7 +42,20 @@ if(page == "pd_admin"){
   window.open("https://rdcp.cdc.gov/index.php?action=create", "_blank");
 }
 
+
+
 if(page == "new_proj"){
+
+    var project_type = localStorage.getItem("project_type");
+    console.log("Retrieved Project Type:", project_type);
+    
+    var project_type = localStorage.getItem("project_type");
+    console.log("Retrieved Project Name:", project_name);  
+
+    if (project_name) {
+        document.querySelector("#app_title").value = project_name;
+    }
+  
     if (project_type === "Administrative") {
       document.querySelector("#purpose").value = 4;
     } else if (project_type === "Monitoring and Evaluation") {
