@@ -54,10 +54,12 @@ if(page == "new_proj"){
     var project_name = localStorage.getItem("project_name");
     console.log("Retrieved Project Name:", project_name);  
 
+    //Populate Project Name
     if (project_name) {
         document.querySelector("#app_title").value = project_name;
     }
-  
+
+    // Select Project Type from Drop Down
     if (project_type === "Administrative") {
       document.querySelector("#purpose").value = 4;
     } else if (project_type === "Monitoring and Evaluation") {
@@ -69,4 +71,12 @@ if(page == "new_proj"){
     } else if (project_type === "Surveillance") {
         document.querySelector("#purpose").value = 2;
     }
+
+    //Set Project Creation Option to Use a Template
+    document.querySelector("#pagecontent > div > form > table > tbody > tr:nth-child(9) > td:nth-child(2) > div:nth-child(3) > label").click()
+
+    //Select New Project Template
+    document.querySelector("#table-template_projects_list > tbody > tr:nth-child(9) > td:nth-child(1) > div > input[type=radio]").click()
+
+  
 }
