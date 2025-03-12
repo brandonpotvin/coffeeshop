@@ -26,8 +26,10 @@ if(page == "pd_admin"){
   var project_name = document.querySelector("#summary_request-tr > td > div > div > center > table > tbody > tr:nth-child(6) > td:nth-child(2) > p > b > span").textContent
   console.log("Project Name: ", project_name)
   
-  // Copy Project Name to the Clipboard
+  var project_type = document.querySelector("#summary_request-tr > td > div > div > center > table > tbody > tr:nth-child(5) > td:nth-child(2) > p > b > span").textContent
+  console.log("Project Type: ", project_type)
   
+  // Copy Project Name to the Clipboard
   copyToClipboard(project_name)
 
   // Open New Project
