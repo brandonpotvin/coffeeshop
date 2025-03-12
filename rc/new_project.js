@@ -49,7 +49,7 @@ if(page == "new_proj"){
     var project_type = localStorage.getItem("project_type");
     console.log("Retrieved Project Type:", project_type);
     
-    var project_type = localStorage.getItem("project_type");
+    var project_name = localStorage.getItem("project_name");
     console.log("Retrieved Project Name:", project_name);  
 
     if (project_name) {
