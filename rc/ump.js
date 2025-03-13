@@ -54,7 +54,7 @@ if(page == "sams_aa"){
   if (nameElement) {
       var full_name = nameElement.textContent.trim(); // Trim spaces to avoid errors
       full_name = full_name.replace(/  /g, " ")
-      let [first_name = "", last_name = ""] = fullName.split(" "); // Default to empty strings if split fails
+      let [first_name = "", last_name = ""] = full_name.split(" "); // Default to empty strings if split fails
   
       // Store in localStorage
       localStorage.setItem("first_name", first_name);
