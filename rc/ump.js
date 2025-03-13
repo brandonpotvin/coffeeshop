@@ -53,6 +53,8 @@ if(page == "sams_aa"){
   let [first_name, last_name] = fullName.split(" ");
   localStorage.setItem("first_name", first_name);
   localStorage.setItem("first_name", last_name);
+  var first_name = localStorage.getItem("first_name");
+  var last_name = localStorage.getItem("last_name");
   
   // Get RecordID
   //var environment = document.querySelector("#warning_rename_3-tr > td > div > div > table > tbody > tr > td > div > center > p > b > span.piping_receiver.piperec-4200-access_env-value").textContent
