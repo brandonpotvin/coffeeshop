@@ -45,8 +45,15 @@ if(page == "sams_aa"){
   // Get Email
   var email_address = document.querySelector("#user_info_1-tr > td > div > div > center > table > tbody > tr:nth-child(3) > td:nth-child(2) > p > b").textContent
   email_address = email_address.substring(email_address.indexOf('-') + 1).trim()
+  localStorage.setItem("email_address", email_address);
   console.log("Email Address: ", email_address)
 
+  // Get Name
+  var fullName = document.querySelector("#user_info_1-tr > td > div > div > center > table > tbody > tr:nth-child(3) > td:nth-child(2) > p > b").textContent
+  let [first_name, last_name] = fullName.split(" ");
+  localStorage.setItem("first_name", first_name);
+  localStorage.setItem("first_name", last_name);
+  
   // Get RecordID
   //var environment = document.querySelector("#warning_rename_3-tr > td > div > div > table > tbody > tr > td > div > center > p > b > span.piping_receiver.piperec-4200-access_env-value").textContent
   var env = document.querySelector("#user_info_1-tr > td > div > div > center > table > tbody > tr:nth-child(7) > td:nth-child(2) > p > b > a").textContent
