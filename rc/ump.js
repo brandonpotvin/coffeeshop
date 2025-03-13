@@ -48,13 +48,28 @@ if(page == "sams_aa"){
   localStorage.setItem("email_address", email_address);
   console.log("Email Address: ", email_address)
 
-  // Get Name
-  var fullName = document.querySelector("#user_info_1-tr > td > div > div > center > table > tbody > tr:nth-child(3) > td:nth-child(2) > p > b").textContent
-  let [first_name, last_name] = fullName.split(" ");
-  localStorage.setItem("first_name", first_name);
-  localStorage.setItem("first_name", last_name);
-  first_name = localStorage.getItem("first_name");
-  last_name = localStorage.getItem("last_name");
+  // Get Names
+  var nameElement = document.querySelector("#user_info_1-tr > td > div > div > center > table > tbody > tr:nth-child(3) > td:nth-child(2) > p > b");
+  
+  if (nameElement) {
+      var fullName = nameElement.textContent.trim(); // Trim spaces to avoid errors
+      let [first_name = "", last_name = ""] = fullName.split(" "); // Default to empty strings if split fails
+  
+      // Store in localStorage
+      localStorage.setItem("first_name", first_name);
+      localStorage.setItem("last_name", last_name); // Fixed typo (was storing first_name twice)
+  
+  } else {
+      console.warn("User name element not found!");
+  }
+  
+  // Retrieve stored values
+  let first_name = localStorage.getItem("first_name") || "Unknown";
+  let last_name = localStorage.getItem("last_name") || "Unknown";
+  
+  console.log("First Name:", first_name);
+  console.log("Last Name:", last_name);
+
   
   // Get RecordID
   //var environment = document.querySelector("#warning_rename_3-tr > td > div > div > table > tbody > tr > td > div > center > p > b > span.piping_receiver.piperec-4200-access_env-value").textContent
