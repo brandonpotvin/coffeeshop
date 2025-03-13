@@ -59,6 +59,10 @@ if(page == "sams_aa"){
       // Store in localStorage
       localStorage.setItem("first_name", first_name);
       localStorage.setItem("last_name", last_name); // Fixed typo (was storing first_name twice)
+      
+      //Copy to Clipboard
+      copyToClipboard(first_name)
+      copyToClipboard(last_name)
   
   } else {
       console.warn("User name element not found!");
