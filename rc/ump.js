@@ -52,7 +52,8 @@ if(page == "sams_aa"){
   var nameElement = document.querySelector("#user_info_1-tr > td > div > div > center > table > tbody > tr:nth-child(3) > td:nth-child(2) > p > b");
   
   if (nameElement) {
-      var fullName = nameElement.textContent.trim(); // Trim spaces to avoid errors
+      var full_name = nameElement.textContent.trim(); // Trim spaces to avoid errors
+      full_name = full_name.replace(/  /g, " ")
       let [first_name = "", last_name = ""] = fullName.split(" "); // Default to empty strings if split fails
   
       // Store in localStorage
