@@ -1,11 +1,4 @@
-// Open Page Assign Activity
-window.open("https://im.cdc.gov/iam/im/SAMS3/ui/index.jsp?task.tag=AssignActivityAccess");
-
-
-
-//Select option to serach by email, paste email from clipboard and start search
-
-document.querySelector("#Filter\\.0\\.Field").selectedIndex = 4 //set search option to email
+let sams_url = "https://im.cdc.gov/iam/im/SAMS3/ui/index.jsp?task.tag=AssignActivityAccess";
 
 function readFromClipboard(){
     navigator.clipboard
@@ -17,6 +10,19 @@ function readFromClipboard(){
    });
 }
 
-readFromClipboard()
+// Check if the current URL matches sams_url
+if (window.location.href === sams_url) {
+  console.log(sams_url)
+    //Select option to serach by email, paste email from clipboard and start search
+    document.querySelector("#Filter\\.0\\.Field").selectedIndex = 4 //set search option to email
+    readFromClipboard()
+    document.querySelector("#imh_1").click(); //click search button
+} else {
+  window.location.href = sams_url; // Redirect to sams_url
+}
 
-document.querySelector("#imh_1").click(); //click search button
+
+// //Select option to serach by email, paste email from clipboard and start search
+// document.querySelector("#Filter\\.0\\.Field").selectedIndex = 4 //set search option to email
+// readFromClipboard()
+// document.querySelector("#imh_1").click(); //click search button
