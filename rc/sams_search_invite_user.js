@@ -20,6 +20,13 @@
                 } else {
                     alert("Could not find the USER_ID field on this page");
                 }
+                const emailField = document.getElementById("EMAIL");
+                if (emailField) {
+                    emailField.value = text;
+                    console.log("Clipboard content pasted into EMAIL field");
+                } else {
+                    alert("Could not find the EMAIL field on this page");
+                }
             })
             .catch(error => {
                 alert("Could not access clipboard. Error: " + error);
