@@ -1,6 +1,6 @@
 javascript:(function() {
     // Replace this with the actual SAMS URL you want to use
-    const samsUrl = "https://your-sams-url.com/login";
+    const samsUrl = "https://im.cdc.gov/iam/im/SAMS3/ui/index.jsp?task.tag=SAMSInviteUser";
     
     // Check if the current URL matches the SAMS URL
     if (window.location.href.includes(samsUrl)) {
