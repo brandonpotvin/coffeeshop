@@ -9,7 +9,10 @@
     
     // Check if the current URL matches the SAMS URL
     if (window.location.href.includes(samsUrl)) {
-        // We're on the right page, now try to read from clipboard
+        //We're on the right page, 
+        // Set Search Option to Email
+        document.querySelector("#Filter\\.0\\.Field").selectedIndex = 4 
+        // Try to read from clipboard
         navigator.clipboard.readText()
             .then(text => {
                 // Set the value to the specified filter input field
