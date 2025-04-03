@@ -77,7 +77,8 @@ if(page == "sams_aa"){
   
   // Get RecordID
   //var environment = document.querySelector("#warning_rename_3-tr > td > div > div > table > tbody > tr > td > div > center > p > b > span.piping_receiver.piperec-4200-access_env-value").textContent
-  var env = document.querySelector("#user_info_1-tr > td > div > div > center > table > tbody > tr:nth-child(7) > td:nth-child(2) > p > b > a").textContent
+  // var env = document.querySelector("#user_info_1-tr > td > div > div > center > table > tbody > tr:nth-child(7) > td:nth-child(2) > p > b > a").textContent
+  var env = document.querySelector("#user_info_1-tr > td > div > div > div > center > table > tbody > tr:nth-child(7) > td:nth-child(2) > p > strong > a").textContent
 
   if(env == 'https://rdcp.cdc.gov'){
     environment = 'SAMS'
