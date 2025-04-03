@@ -50,7 +50,8 @@ if(page == "sams_aa"){
   console.log("Email Address: ", email_address)
 
   // Get Names
-  var nameElement = document.querySelector("#user_info_1-tr > td > div > div > center > table > tbody > tr:nth-child(3) > td:nth-child(2) > p > b");
+  // var nameElement = document.querySelector("#user_info_1-tr > td > div > div > center > table > tbody > tr:nth-child(3) > td:nth-child(2) > p > b");
+  var nameElement = document.querySelector("#user_info_1-tr > td > div > div > div > center > table > tbody > tr:nth-child(3) > td:nth-child(2) > p > strong")
   
   if (nameElement) {
       var full_name = nameElement.textContent.trim(); // Trim spaces to avoid errors
