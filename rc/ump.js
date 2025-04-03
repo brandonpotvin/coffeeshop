@@ -43,7 +43,8 @@ if(page == "sams_aa"){
   }
 
   // Get Email
-  var email_address = document.querySelector("#user_info_1-tr > td > div > div > center > table > tbody > tr:nth-child(3) > td:nth-child(2) > p > b").textContent
+  // var email_address = document.querySelector("#user_info_1-tr > td > div > div > center > table > tbody > tr:nth-child(3) > td:nth-child(2) > p > b").textContent
+  var email_address = document.querySelector("#user_info_1-tr > td > div > div > div > center > table > tbody > tr:nth-child(3) > td:nth-child(2) > p > strong").textContent
   email_address = email_address.substring(email_address.indexOf('-') + 1).trim()
   localStorage.setItem("email_address", email_address);
   console.log("Email Address: ", email_address)
