@@ -31,13 +31,14 @@ if(page == "pd_admin"){
  // Store in localStorage
  localStorage.setItem("project_name", project_name);
 
- var project_type = document.querySelector("#summary_request-tr > td > div > div > center > table > tbody > tr:nth-child(5) > td:nth-child(2) > p > b > span").textContent;
+ var project_type = document.querySelector("#summary_request-tr > td > div > div > div > center > table > tbody > tr:nth-child(4) > td:nth-child(2) > p > strong > span").textContent
  project_type = project_type.trim(); 
   // Store in localStorage
  localStorage.setItem("project_type", project_type);
 
-  // var project_type = document.querySelector("#summary_request-tr > td > div > div > center > table > tbody > tr:nth-child(5) > td:nth-child(2) > p > b > span").textContent
-  var project_type = document.querySelector("#summary_request-tr > td > div > div > div > center > table > tbody > tr:nth-child(4) > td:nth-child(2) > p > strong > span").textContent
+  // // var project_type = document.querySelector("#summary_request-tr > td > div > div > center > table > tbody > tr:nth-child(5) > td:nth-child(2) > p > b > span").textContent
+  // var project_type = document.querySelector("#summary_request-tr > td > div > div > div > center > table > tbody > tr:nth-child(4) > td:nth-child(2) > p > strong > span").textContent
+  
   console.log("Project Type: ", project_type)
   
   // Copy Project Name to the Clipboard
