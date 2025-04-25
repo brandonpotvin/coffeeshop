@@ -23,7 +23,9 @@ console.log(page)
 
 if(page == "pd_admin"){
   // Get Project Name
-  var project_name = document.querySelector("#summary_request-tr > td > div > div > center > table > tbody > tr:nth-child(6) > td:nth-child(2) > p > b > span").textContent
+  
+  // var project_name = document.querySelector("#summary_request-tr > td > div > div > center > table > tbody > tr:nth-child(6) > td:nth-child(2) > p > b > span").textContent
+  var project_name = document.querySelector("#summary_request-tr > td > div > div > div > center > table > tbody > tr:nth-child(5) > td:nth-child(2) > p > strong > span").textContent
   project_name = project_name.trim(); 
   console.log("Project Name: ", project_name)
  // Store in localStorage
@@ -34,7 +36,8 @@ if(page == "pd_admin"){
   // Store in localStorage
  localStorage.setItem("project_type", project_type);
 
-  var project_type = document.querySelector("#summary_request-tr > td > div > div > center > table > tbody > tr:nth-child(5) > td:nth-child(2) > p > b > span").textContent
+  // var project_type = document.querySelector("#summary_request-tr > td > div > div > center > table > tbody > tr:nth-child(5) > td:nth-child(2) > p > b > span").textContent
+  var project_type = document.querySelector("#summary_request-tr > td > div > div > div > center > table > tbody > tr:nth-child(4) > td:nth-child(2) > p > strong > span").textContent
   console.log("Project Type: ", project_type)
   
   // Copy Project Name to the Clipboard
